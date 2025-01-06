@@ -10,8 +10,10 @@ class ExplorePage extends StatefulWidget {
 class _ExplorePageState extends State<ExplorePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text('Explore page')),
+    return SafeArea(
+      child: Scaffold(
+        body: Center(child: Text('Explore page')),
+      ),
     );
   }
 }

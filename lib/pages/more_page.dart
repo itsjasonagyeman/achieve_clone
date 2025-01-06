@@ -10,8 +10,10 @@ class MorePage extends StatefulWidget {
 class _MorePageState extends State<MorePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text('More Page')),
+    return SafeArea(
+      child: Scaffold(
+        body: Center(child: Text('More Page')),
+      ),
     );
   }
 }
