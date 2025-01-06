@@ -1,3 +1,4 @@
+import 'package:achieve_clone/pages/explore_page.dart';
 import 'package:achieve_clone/pages/homepage.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Homepage(),
+      home: ExplorePage(),
     );
   }
 }

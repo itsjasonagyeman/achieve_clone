@@ -1,3 +1,4 @@
+import 'package:achieve_clone/general_components/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -12,20 +13,55 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          title: const Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Text('Hi, Jason', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w500),),
-            ],
+        appBar: const CustomAppBar(),
+        body: SingleChildScrollView(
+          child: Padding(
+            padding:  const EdgeInsets.fromLTRB(15,8,15,8),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text('Your Investments', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),),
+                const SizedBox(height: 10,),
+                Container( //Investment balance
+                  height: 180,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.lightBlue,
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                ),
+                const SizedBox(height: 10,),
+                Container( //Petra pensions
+                  height: 180,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.blueGrey,
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                ),
+                const SizedBox(height: 15,),
+                Container( //discover
+                  height: 120,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.purpleAccent,
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                ),
+                const SizedBox(height: 15,),
+                Container( //Manage your work
+                  height: 120,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.purpleAccent[100],
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                ),
+              ],
+            ),
           ),
-          actions: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.question_mark_outlined)),
-            IconButton(onPressed: (){}, icon: Icon(Icons.notifications_none_outlined)),
-            IconButton(onPressed: (){}, icon: Icon(Icons.comment))
-          ],
         ),
-        body: Center(child: Text('Homepage')),
       ),
     );
   }
