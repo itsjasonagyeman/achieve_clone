@@ -19,7 +19,7 @@ class _MorePageState extends State<MorePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container( //Achieve Blog
-              height: MediaQuery.of(context).size.height * 0.3,
+              height: MediaQuery.of(context).size.height * 0.35,
               width: double.infinity,
               decoration: const BoxDecoration(
                 color: Colors.purpleAccent
