@@ -67,7 +67,7 @@ class _HomepageState extends State<Homepage> {
                           ),
                           Spacer(),
                           Text(
-                            'GHS 100.00',
+                            'GHS 0.00',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,

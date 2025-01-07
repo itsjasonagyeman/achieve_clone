@@ -1,4 +1,6 @@
+import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/tab_State.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class TabSwitch extends StatefulWidget {
   const TabSwitch({super.key});
@@ -8,11 +10,13 @@ class TabSwitch extends StatefulWidget {
 }
 
 class _TabSwitchState extends State<TabSwitch> {
-  bool activeTab = true; // Tracks the active tab state
+  
 
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
+
+    final currentTab = Provider.of<TabState>(context);
 
     return Container(
       height: 50,
@@ -29,16 +33,16 @@ class _TabSwitchState extends State<TabSwitch> {
           GestureDetector(
             onTap: () {
               setState(() {
-                activeTab = true; // Switch to "ACTIVE" tab
+                currentTab.isActive(); // Switch to "ACTIVE" tab
               });
             },
             child: Container(
               height: 40,
               width: screenWidth / 2 - 16,
               decoration: BoxDecoration(
-                color: activeTab ? Colors.white : Colors.transparent,
+                color: currentTab.isactiveTab ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.circular(20),
-                boxShadow: activeTab
+                boxShadow: currentTab.isactiveTab
                     ? [
                         BoxShadow(
                           spreadRadius: 2,
@@ -61,16 +65,16 @@ class _TabSwitchState extends State<TabSwitch> {
           GestureDetector(
             onTap: () {
               setState(() {
-                activeTab = false; // Switch to "HISTORY" tab
+                currentTab.isHistory(); // Switch to "HISTORY" tab
               });
             },
             child: Container(
               height: 40,
               width: screenWidth / 2 - 16,
               decoration: BoxDecoration(
-                color: !activeTab ? Colors.white : Colors.transparent,
+                color: !currentTab.isactiveTab ? Colors.white : Colors.transparent,
                 borderRadius: BorderRadius.circular(20),
-                boxShadow: !activeTab
+                boxShadow: !currentTab.isactiveTab
                     ? [
                         BoxShadow(
                           spreadRadius: 2,

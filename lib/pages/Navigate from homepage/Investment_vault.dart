@@ -1,5 +1,7 @@
+import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/tab_State.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/tab_Switch.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class InvestmentVault extends StatefulWidget {
   const InvestmentVault({super.key});
@@ -12,6 +14,7 @@ class _InvestmentVaultState extends State<InvestmentVault> {
   @override
   Widget build(BuildContext context) {
 
+    final tab = Provider.of<TabState>(context);
     
     return SafeArea(
       child: Scaffold(
@@ -26,6 +29,9 @@ class _InvestmentVaultState extends State<InvestmentVault> {
           child: Column(
             children: [
                 TabSwitch(),
+                SizedBox(height: 10,),
+                tab.isactiveTab?
+                Text('Save towards the things you love'):Text('Your completed investment goals')
             ],
           ),
         ),
