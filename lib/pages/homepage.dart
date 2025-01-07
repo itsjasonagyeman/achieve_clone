@@ -1,4 +1,5 @@
 import 'package:achieve_clone/general_components/custom_app_bar.dart';
+import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -26,49 +27,54 @@ class _HomepageState extends State<Homepage> {
                   style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
                 ),
                 const SizedBox(height: 10),
-                Container(
-                  // Investment balance
-                  height: 180,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.lightBlue,
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: const LinearGradient(
-                      colors: [Colors.blueAccent, Colors.lightBlue],
-                      stops: [0.0, 0.8],
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=>const InvestmentVault()));
+                  },
+                  child: Container(
+                    // Investment balance
+                    height: 180,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.lightBlue,
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: const LinearGradient(
+                        colors: [Colors.blueAccent, Colors.lightBlue],
+                        stops: [0.0, 0.8],
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                      ),
                     ),
-                  ),
-                  child: const Padding(
-                    padding: EdgeInsets.all(25.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Total Flexible',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 15),
-                        ),
-                        Text(
-                          'Investment Balance',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.normal,
-                              fontSize: 15),
-                        ),
-                        Spacer(),
-                        Text(
-                          'GHS 100.00',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 20),
-                        )
-                      ],
+                    child: const Padding(
+                      padding: EdgeInsets.all(25.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Total Flexible',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 15),
+                          ),
+                          Text(
+                            'Investment Balance',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 15),
+                          ),
+                          Spacer(),
+                          Text(
+                            'GHS 100.00',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20),
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 ),
