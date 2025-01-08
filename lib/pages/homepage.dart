@@ -1,6 +1,7 @@
 import 'package:achieve_clone/general_components/custom_app_bar.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/connect_employer.dart';
+import 'package:achieve_clone/pages/Navigate%20from%20homepage/petra_pensions.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -114,20 +115,25 @@ class _HomepageState extends State<Homepage> {
                                     fontSize: 15),
                               ),
                               const SizedBox(height: 10),
-                              Container(
-                                height: 40,
-                                width: 120,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(8),
-                                  color: Colors.white,
-                                ),
-                                child: const Center(
-                                  child: Text(
-                                    'Start now',
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.normal,
-                                        fontSize: 15),
+                              GestureDetector(
+                                onTap: (){
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> PetraPensions()));
+                                },
+                                child: Container(
+                                  height: 40,
+                                  width: 120,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(8),
+                                    color: Colors.white,
+                                  ),
+                                  child: const Center(
+                                    child: Text(
+                                      'Start now',
+                                      style: TextStyle(
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.normal,
+                                          fontSize: 15),
+                                    ),
                                   ),
                                 ),
                               )

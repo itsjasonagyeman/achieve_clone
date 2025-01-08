@@ -41,7 +41,26 @@ class _ConnectEmployerState extends State<ConnectEmployer> {
                 autoPlay: true,
                 initialPage: 0,
                 height: 400
-              ))
+              )),
+              Container(
+                height: 50,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.blue[800]
+                ),
+                child: const Center(child: Text('Continue', style: TextStyle(color: Colors.white, fontSize: 20),)),
+              ),
+              const SizedBox(height: 10,),
+              Container(
+                height: 50,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.grey
+                ),
+                child: const Center(child: Text('Later', style: TextStyle(color: Colors.black, fontSize: 20),)),
+              )
           ],
         ),
       ),
