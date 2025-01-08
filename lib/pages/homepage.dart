@@ -1,5 +1,6 @@
 import 'package:achieve_clone/general_components/custom_app_bar.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault.dart';
+import 'package:achieve_clone/pages/Navigate%20from%20homepage/connect_employer.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -229,7 +230,9 @@ class _HomepageState extends State<Homepage> {
                         ),
                         const SizedBox(height: 10),
                         GestureDetector(
-                          onTap: (){},
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> ConnectEmployer()));
+                          },
                           child: Container(
                             height: 40,
                             width: 120,
