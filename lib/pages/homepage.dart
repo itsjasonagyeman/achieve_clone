@@ -228,20 +228,23 @@ class _HomepageState extends State<Homepage> {
                               fontSize: 13),
                         ),
                         const SizedBox(height: 10),
-                        Container(
-                          height: 40,
-                          width: 120,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.black,
-                          ),
-                          child: const Center(
-                            child: Text(
-                              'Get Started',
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 15),
+                        GestureDetector(
+                          onTap: (){},
+                          child: Container(
+                            height: 40,
+                            width: 120,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: Colors.black,
+                            ),
+                            child: const Center(
+                              child: Text(
+                                'Get Started',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.normal,
+                                    fontSize: 15),
+                              ),
                             ),
                           ),
                         )

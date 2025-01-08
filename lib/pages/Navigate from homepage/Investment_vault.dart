@@ -13,14 +13,21 @@ class InvestmentVault extends StatefulWidget {
 class _InvestmentVaultState extends State<InvestmentVault> {
   @override
   Widget build(BuildContext context) {
-
     final tab = Provider.of<TabState>(context);
-    
+
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text('Investment vault', style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),),
-          leading: IconButton(onPressed: (){Navigator.pop(context);}, icon: Icon(Icons.arrow_back_ios),),
+          title: const Text(
+            'Investment Vault',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+          ),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: const Icon(Icons.arrow_back_ios),
+          ),
           centerTitle: true,
           elevation: 1,
         ),
@@ -28,13 +35,22 @@ class _InvestmentVaultState extends State<InvestmentVault> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-                TabSwitch(),
-                SizedBox(height: 10,),
-                tab.isactiveTab?
-                Text('Save towards the things you love'):Text('Your completed investment goals')
+              const TabSwitch(),
+              const SizedBox(height: 10),
+              tab.isactiveTab
+                  ? const Text('Save towards the things you love')
+                  : const Text('Your completed investment goals'),
             ],
           ),
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+          },
+          backgroundColor: Colors.blue[800],
+          shape: const CircleBorder(),
+          child: const Icon(Icons.add, color: Colors.white),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat, 
       ),
     );
   }
