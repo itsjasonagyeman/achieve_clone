@@ -1,4 +1,6 @@
 import 'package:achieve_clone/general_components/custom_app_bar.dart';
+import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault.dart';
+import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/Save_invest/save_invest_page.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/petra_pensions.dart';
 import 'package:achieve_clone/pages/more_page.dart';
 import 'package:flutter/material.dart';
@@ -12,8 +14,42 @@ class ExplorePage extends StatefulWidget {
 }
 
 class _ExplorePageState extends State<ExplorePage> {
+
+  final List pageName = [
+    'Flexible Investments',
+    'Groups',
+    'Goals',
+    'Fixed Investments',
+  ];
+
+  final List pageImage = [
+    Icons.wallet,
+    Icons.people,
+    Icons.emoji_events_outlined,
+    Icons.lock,
+  ];
+
+  final List pageColour = [
+    Colors.green,
+    Colors.black,
+    Colors.orange, 
+    Colors.purple,
+  ];
+
+  final List navigation = [
+      const SaveInvestPage(),
+      const SaveInvestPage(),
+      const InvestmentVault(),
+      const SaveInvestPage(),
+  ];
+  
+
   @override
   Widget build(BuildContext context) {
+
+
+
+
     return SafeArea(
       child: Scaffold(
         appBar: const CustomAppBar(),
@@ -42,34 +78,39 @@ class _ExplorePageState extends State<ExplorePage> {
                       return Padding(
                         padding: const EdgeInsets.fromLTRB(0,8,8,8),
                         child: 
-                        Container(height: 100,  decoration: BoxDecoration(
-                            color: Colors.blue,
-                            borderRadius: BorderRadius.circular(15)
-                          ),
-                          child: Padding(
-                            padding: const EdgeInsets.all(15.0),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Container(
-                                  height: 50,
-                                  width: 50,
-                                  decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(0.1),
-                                    shape: BoxShape.circle
+                        GestureDetector(
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> navigation[index]));
+                          },
+                          child: Container(height: 100,  decoration: BoxDecoration(
+                              color: pageColour[index],
+                              borderRadius: BorderRadius.circular(15)
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    height: 50,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      color: Colors.white.withOpacity(0.1),
+                                      shape: BoxShape.circle
+                                    ),
+                                    child: Center(child: Icon(pageImage[index], color: Colors.white,)),
                                   ),
-                                  child: const Center(child: Icon(Icons.wallet, color: Colors.white,)),
-                                ),
-                                const Spacer(),
-                                const Row(
-                                  children: [
-                                    Text('Flexible Investments', style: TextStyle(color: Colors.white, fontSize: 14),),
-                                    Spacer(),
-                                    Icon(Icons.arrow_forward_ios, color: Colors.white, size: 10,)
-                                  ],
-                                )
-                              ],
+                                  const Spacer(),
+                                  Row(
+                                    children: [
+                                      Text(pageName[index], style: const TextStyle(color: Colors.white, fontSize: 14),),
+                                      const Spacer(),
+                                      const Icon(Icons.arrow_forward_ios, color: Colors.white, size: 10,)
+                                    ],
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                         ),
