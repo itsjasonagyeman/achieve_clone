@@ -1,4 +1,5 @@
 import 'package:achieve_clone/general_components/custom_app_bar.dart';
+import 'package:achieve_clone/pages/Navigate%20from%20homepage/connect_employer.dart';
 import 'package:flutter/material.dart';
 
 class MorePage extends StatefulWidget {
@@ -22,7 +23,7 @@ class _MorePageState extends State<MorePage> {
               height: MediaQuery.of(context).size.height * 0.35,
               width: double.infinity,
               decoration: const BoxDecoration(
-                color: Colors.purpleAccent
+                color: Color.fromARGB(255, 208, 163, 216)
               ),
             ),
             const SizedBox(height: 50),
@@ -61,14 +62,19 @@ class _MorePageState extends State<MorePage> {
                   const SizedBox(height: 10),
                   GestureDetector(
                     onTap: (){},
-                    child: Container( //petra pensions
-                      height: 50,
-                      width: double.infinity,
-                      decoration: BoxDecoration(
-                        color: Colors.blueGrey[600],
-                        borderRadius: BorderRadius.circular(10)
+                    child: GestureDetector(
+                      onTap: (){
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> const ConnectEmployer()));
+                      },
+                      child: Container( //petra pensions
+                        height: 50,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Colors.blueGrey[600],
+                          borderRadius: BorderRadius.circular(10)
+                        ),
+                        child:  const Center(child: Text('Connect to your employer', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 18, color: Colors.white),)),
                       ),
-                      child:  const Center(child: Text('Connect to your employer', style: TextStyle(fontWeight: FontWeight.normal, fontSize: 18, color: Colors.white),)),
                     ),
                   ),
                 const SizedBox(height: 5),

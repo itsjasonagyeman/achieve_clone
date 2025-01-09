@@ -2,6 +2,7 @@ import 'package:achieve_clone/general_components/custom_app_bar.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/connect_employer.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/petra_pensions.dart';
+import 'package:achieve_clone/pages/explore_page.dart';
 import 'package:flutter/material.dart';
 
 class Homepage extends StatefulWidget {
@@ -145,63 +146,68 @@ class _HomepageState extends State<Homepage> {
                   ),
                 ),
                 const SizedBox(height: 15),
-                Container(
-                  // Discover section
-                  height: 120,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.purpleAccent,
-                    borderRadius: BorderRadius.circular(20),
-                    gradient: const LinearGradient(
-                      colors: [
-                        Color.fromARGB(255, 191, 86, 209),
-                        Color.fromARGB(255, 239, 150, 255)
-                      ],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> const ExplorePage()));
+                  },
+                  child: Container(
+                    // Discover section
+                    height: 120,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.purpleAccent,
+                      borderRadius: BorderRadius.circular(20),
+                      gradient: const LinearGradient(
+                        colors: [
+                          Color.fromARGB(255, 191, 86, 209),
+                          Color.fromARGB(255, 239, 150, 255)
+                        ],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
                     ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(15.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        Image.asset(
-                          'lib/images/discover.png',
-                          height: 120,
-                          width: 120,
-                          fit: BoxFit.cover,
-                        ),
-                        const SizedBox(width: 10),
-                        const Expanded(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'Discover even more ways to build a financially-secured future',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 15,
-                                  height: 1.2,
-                                ),
-                                maxLines: 3,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                'Discover >',
-                                style: TextStyle(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 15),
-                              ),
-                            ],
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Image.asset(
+                            'lib/images/discover.png',
+                            height: 120,
+                            width: 120,
+                            fit: BoxFit.cover,
                           ),
-                        ),
-                      ],
+                          const SizedBox(width: 10),
+                          const Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Discover even more ways to build a financially-secured future',
+                                  style: TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 15,
+                                    height: 1.2,
+                                  ),
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  'Discover >',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 15),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
