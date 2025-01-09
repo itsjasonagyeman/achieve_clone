@@ -117,7 +117,7 @@ class _HomepageState extends State<Homepage> {
                               const SizedBox(height: 10),
                               GestureDetector(
                                 onTap: (){
-                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> PetraPensions()));
+                                  Navigator.push(context, MaterialPageRoute(builder: (context)=> const PetraPensions()));
                                 },
                                 child: Container(
                                   height: 40,
@@ -237,7 +237,7 @@ class _HomepageState extends State<Homepage> {
                         const SizedBox(height: 10),
                         GestureDetector(
                           onTap: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=> ConnectEmployer()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> const ConnectEmployer()));
                           },
                           child: Container(
                             height: 40,

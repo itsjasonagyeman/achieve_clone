@@ -1,3 +1,4 @@
+import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/Save_invest/save_invest_tab_change.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/tab_State.dart';
 import 'package:achieve_clone/pages/homepage.dart';
 import 'package:flutter/material.dart';
@@ -8,6 +9,7 @@ void main() {
     MultiProvider(
     providers: [
       ChangeNotifierProvider(create: (context) => TabState()),
+      ChangeNotifierProvider(create: (context) => SaveInvestTabChange()),
       ],
       child: const MyApp()),
   );
