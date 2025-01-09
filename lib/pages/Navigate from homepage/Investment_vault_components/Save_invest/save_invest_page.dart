@@ -1,5 +1,4 @@
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/Save_invest/save_invest_tab_change.dart';
-import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/Save_invest/save_invest_text.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -48,7 +47,7 @@ class _SaveInvestPageState extends State<SaveInvestPage> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(8,10,8,10),
+                          padding: const EdgeInsets.fromLTRB(8,10,8,10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -73,7 +72,7 @@ class _SaveInvestPageState extends State<SaveInvestPage> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(8,10,8,10),
+                          padding: const EdgeInsets.fromLTRB(8,10,8,10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -98,7 +97,7 @@ class _SaveInvestPageState extends State<SaveInvestPage> {
                           borderRadius: BorderRadius.circular(15),
                         ),
                         child: Padding(
-                          padding: EdgeInsets.fromLTRB(8,10,8,10),
+                          padding: const EdgeInsets.fromLTRB(8,10,8,10),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -113,7 +112,54 @@ class _SaveInvestPageState extends State<SaveInvestPage> {
                   ],
                 ),
               ),
-              const SaveInvestText()
+              const SizedBox(height: 20,),
+              SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(currentTab.isDigisave? 'Digisave': currentTab.isEurobond?'Eurobond trust': currentTab.isGlobal?'Enhanced Equity Beta Fund(Global Tech)':'',  style: const TextStyle(color: Colors.black, fontSize: 20, fontWeight: FontWeight.bold),),
+                    const SizedBox(height: 10,),
+                Text(
+                currentTab.isDigisave?'Low-risk fund primarily invested in Treasury bills and bonds.':
+                currentTab.isEurobond? 'Moderate-risk fund fully invested in US Dollar-denominated Eurobonds':
+                currentTab.isGlobal? 'High-risk fund primarily invested in global equities with a focus on technology(Apple, Google, Netflix etc.)':'',
+                style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w400),),
+                Text(
+                currentTab.isDigisave?'Perfect for short-term goals(3 to 12 months).':
+                currentTab.isEurobond? 'Perfect for medium-term goals(2 to 3 years).':
+                currentTab.isGlobal?'Perfect for long-term goals(3+ years).': '',
+                style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal),),
+                const SizedBox(height: 20,),
+                const Text('Fun Facts', style: TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal),),
+                Text(
+                currentTab.isDigisave?'1. Earns more than 3x the interest on your Bank/ Momo': 
+                currentTab.isEurobond? '1. Awesome for saving towards US Dollar expenses':
+                currentTab.isGlobal?'1.Low cost access to global stocks': '',
+                style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal),),
+                Text(
+                currentTab.isDigisave?'2. Ideal for beginner investors':
+                currentTab.isEurobond? '2. Ideal for risk neutral investors':
+                currentTab.isGlobal? '2. We designed a 6-month lock to help you stay disciplined.(Withdrawals are enabled 6 months after your first top-up)':'',
+                style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal),),
+                Text(
+                  currentTab.isDigisave?'3. Popular Goals: Emergency fund, Phone':
+                  currentTab.isEurobond?'3. Popular Goals: Car, Vacation, Education':
+                  currentTab.isGlobal?'3. Trust fund for kids, Investing towards Retirement, Wealth building etc.':'',
+                style: const TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.normal),),
+                  ],
+                ),
+              ),         
+              const Spacer(),
+              Container(
+                height: 40,
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  color: Colors.blue[800],
+                  borderRadius: BorderRadius.circular(10)
+                ),
+                child: const Center(child: Text('Continue with', style: TextStyle(color: Colors.white, fontSize: 18),)),
+              )
             ],
           ),
         ),
