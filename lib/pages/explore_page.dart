@@ -1,4 +1,5 @@
 import 'package:achieve_clone/general_components/custom_app_bar.dart';
+import 'package:achieve_clone/pages/Navigate%20from%20explore%20page/MoneySafe.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20explore%20page/groups.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/Save_invest/save_invest_page.dart';
@@ -41,7 +42,7 @@ class _ExplorePageState extends State<ExplorePage> {
       const SaveInvestPage(),
       const Groups(),
       const InvestmentVault(),
-      const SaveInvestPage(),
+      const Moneysafe(),
   ];
   
 

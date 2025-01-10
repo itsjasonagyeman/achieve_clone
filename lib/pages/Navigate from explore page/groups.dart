@@ -1,3 +1,4 @@
+import 'package:achieve_clone/pages/Navigate%20from%20explore%20page/create_group.dart';
 import 'package:flutter/material.dart';
 
 class Groups extends StatelessWidget {
@@ -41,7 +42,7 @@ class Groups extends StatelessWidget {
             ),
             GestureDetector(
               onTap: (){
-                
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> const CreateGroup()));
               },
               child: Container(
                 height: 50,
