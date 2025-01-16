@@ -1,6 +1,6 @@
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/Save_invest/save_invest_page.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/tab_State.dart';
-import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/tab_Switch.dart';
+import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/tab_switch.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

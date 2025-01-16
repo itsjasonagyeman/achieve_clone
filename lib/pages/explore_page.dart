@@ -1,8 +1,8 @@
 import 'package:achieve_clone/general_components/custom_app_bar.dart';
-import 'package:achieve_clone/pages/Navigate%20from%20explore%20page/MoneySafe.dart';
+import 'package:achieve_clone/pages/Navigate%20from%20explore%20page/moneysafe.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20explore%20page/groups.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20explore%20page/request_callback.dart';
-import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault.dart';
+import 'package:achieve_clone/pages/Navigate%20from%20homepage/investment_vault.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/Investment_vault_components/Save_invest/save_invest_page.dart';
 import 'package:achieve_clone/pages/Navigate%20from%20homepage/petra_pensions.dart';
 import 'package:achieve_clone/pages/more_page.dart';
@@ -99,7 +99,7 @@ class _ExplorePageState extends State<ExplorePage> {
                                     height: 50,
                                     width: 50,
                                     decoration: BoxDecoration(
-                                      color: Colors.white.withOpacity(0.1),
+                                      color: Colors.white.withValues(alpha: 0.1),
                                       shape: BoxShape.circle
                                     ),
                                     child: Center(child: Icon(pageImage[index], color: Colors.white,)),

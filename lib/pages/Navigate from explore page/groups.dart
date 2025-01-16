@@ -27,7 +27,7 @@ class Groups extends StatelessWidget {
               height: 100,
               width: 100,
               decoration: BoxDecoration(
-                color: Colors.grey.withOpacity(0.2),
+                color: Colors.grey.withValues(alpha: 0.2),
                 shape: BoxShape.circle,
               ),
               child: const Center(child: Icon(Icons.people_alt_outlined, color: Colors.grey, size: 40,)),

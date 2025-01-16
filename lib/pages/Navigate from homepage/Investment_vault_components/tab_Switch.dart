@@ -48,7 +48,7 @@ class _TabSwitchState extends State<TabSwitch> {
                           spreadRadius: 2,
                           blurRadius: 3,
                           offset: const Offset(3, 3),
-                          color: Colors.black.withOpacity(0.2),
+                          color: Colors.black.withValues(alpha: 0.2),
                         )
                       ]
                     : [],
@@ -80,7 +80,7 @@ class _TabSwitchState extends State<TabSwitch> {
                           spreadRadius: 2,
                           blurRadius: 3,
                           offset: const Offset(3, 3),
-                          color: Colors.black.withOpacity(0.2),
+                          color: Colors.black.withValues(alpha: 0.2),
                         )
                       ]
                     : [],

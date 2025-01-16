@@ -88,7 +88,7 @@ class Moneysafe extends StatelessWidget {
                           width: 30,
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
-                            color: Colors.purple.withOpacity(0.2),
+                            color: Colors.purple.withValues(alpha: 0.2),
                           ),
                           child: const Center(
                             child: Icon(
